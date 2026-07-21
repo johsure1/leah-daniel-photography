@@ -18,27 +18,31 @@ $site = selectSettings($pdo);
 
 <div class="navbar">
     <div class="logo">
-        <a href="home.php"><img src="<?php echo htmlspecialchars($site['logo'] ?? '') ?>" alt="Leah Daniel logo"></a>
+        <a href="home"><img src="<?php echo htmlspecialchars($site['logo'] ?? '') ?>" alt="Leah Daniel logo"></a>
     </div>
     <div class="menus" id="menus">
-        <a href="home.php" class="active">Home</a>
+        <a href="home" class="active">Home</a>
 
         
-        <a href="blog.php">blog</a>
+        <a href="blog">blog</a>
+
+        <a href="gallery">Gallery</a>
         
         
-        <a href="about.php">About</a>
+        <a href="about">About</a>
+
+        <a href="contact">Contact</a>
 
 
         <?php if(isLoged()): ?>
             
-            <a href="profile.php">Profile</a>
-            <a href="logout.php">logout</a>
+            <a href="profile">Profile</a>
+            <a href="logout">logout</a>
 
         <?php endif; ?>
 
         <?php if(isLoged() && $_SESSION['role'] === 'super_admin'): ?>
-            <a href="admin-dashboard.php">admin</a>
+            <a href="admin-dashboard">admin</a>
         <?php endif; ?>
 
         
@@ -48,6 +52,3 @@ $site = selectSettings($pdo);
         <span class="menu-icon">&#9776;</span>
     </div>
 </div>
-
-
-
