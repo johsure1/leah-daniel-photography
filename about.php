@@ -32,7 +32,7 @@ if(isLoged()){
 
 <section class="page-body">
     <div class="container about-grid">
-        <img src="<?php echo htmlspecialchars($profile['image']) ?? '' ?>" alt="Leah Daniel">
+        <img src="<?php echo htmlspecialchars($site_user['image']) ?? '' ?>" alt="Leah Daniel">
         <div>
             <h2>Hi, I'm  <?php echo htmlspecialchars($site_user['name']) ?? '' ?>.</h2>
             <p><?php echo htmlspecialchars($site['about_title']) ?? '' ?></p>
