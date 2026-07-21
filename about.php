@@ -8,7 +8,7 @@ $site = selectSettings($pdo);
 $site_user = selectUsers($pdo);
 
 if(isLoged()){
-    $profile = selectProfile($pdo, $_SESSION['user_id']);
+    $profile = selectProfile($pdo, $_SESSION['user_id'] ?? null);
 }
 ?>
 
@@ -26,16 +26,16 @@ if(isLoged()){
 <?php include 'nav.php'; ?>
 
 <div class="page-hero">
-    <h1>About <?php echo htmlspecialchars($site_user['name']) ?? '' ?></h1>
-    <p><?php echo htmlspecialchars($site['tagline']) ?? '' ?></p>
+    <h1>About <?php echo htmlspecialchars($site_user['name'] ?? '') ?></h1>
+    <p><?php echo htmlspecialchars($site['tagline'] ?? '') ?></p>
 </div>
 
 <section class="page-body">
     <div class="container about-grid">
-        <img src="<?php echo htmlspecialchars($site_user['image']) ?? '' ?>" alt="Leah Daniel">
+        <img src="<?php echo htmlspecialchars($profile['image'] ?? '') ?>" alt="Leah Daniel">
         <div>
-            <h2>Hi, I'm  <?php echo htmlspecialchars($site_user['name']) ?? '' ?>.</h2>
-            <p><?php echo htmlspecialchars($site['about_title']) ?? '' ?></p>
+            <h2>Hi, I'm  <?php echo htmlspecialchars($site_user['name'] ?? '') ?>.</h2>
+            <p><?php echo htmlspecialchars($site['about_title'] ?? '') ?></p>
             <p><?php echo htmlspecialchars($site['about_body']) ?? '' ?></p>
             <div class="skills-list">
                 <span>Portraits</span>

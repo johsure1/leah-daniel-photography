@@ -14,6 +14,8 @@ if(!isLoged()){
     ':id'=>$_SESSION['user_id']
     ]);
     $result=$stmt->fetch();
+
+    var_dump($result['bio']);
 }
 
 
