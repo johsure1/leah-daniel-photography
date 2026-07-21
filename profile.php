@@ -63,8 +63,9 @@ if(!isLoged()){
                         <label for="full_name">Name</label>
                         <h1><?php echo htmlspecialchars($result['name'] ?? ''); ?></h1>
                     </div>
+                    <h2><?php echo htmlspecialchars($result['bio'] ?? ''); ?></h2>
                     <div class="field">
-                        <label for="bio">Bio</label>
+                        <label>Bio</label>
                         <h2><?php echo htmlspecialchars($result['bio'] ?? ''); ?></h2>
                         <br>
                         <h2><a href="profile_upload.php">Edit profile</a></h2>
