@@ -15,7 +15,6 @@ if(!isLoged()){
     ]);
     $result=$stmt->fetch();
 
-    var_dump($result['bio']);
 }
 
 
@@ -66,7 +65,7 @@ if(!isLoged()){
                     </div>
                     <div class="field">
                         <label for="bio">Bio</label>
-                        <h2 id="bio"><?php echo htmlspecialchars($result['bio'] ?? ''); ?></h2>
+                        <h2><?php echo htmlspecialchars($result['bio'] ?? ''); ?></h2>
                         <br>
                         <h2><a href="profile_upload.php">Edit profile</a></h2>
                     </div>
