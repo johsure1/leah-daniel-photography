@@ -63,7 +63,7 @@ if(!isLoged()){
                         <label for="full_name">Name</label>
                         <h1><?php echo htmlspecialchars($result['name'] ?? ''); ?></h1>
                     </div>
-                    <h2><?php echo htmlspecialchars($result['bio'] ?? ''); ?></h2>
+                    <?php var_dump($result); ?>
                     <div class="field">
                         <label>Bio</label>
                         <h2><?php echo htmlspecialchars($result['bio'] ?? ''); ?></h2>
